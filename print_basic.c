@@ -69,6 +69,8 @@ int handle_specifier(char c, va_list args)
 		return (print_string(args));
 	else if (c == '%')
 		return (print_percent(args));
+	else if (c == 'd' || c == 'i')
+		return (print_number(args));
 	else
 	{
 		_putchar('%');
