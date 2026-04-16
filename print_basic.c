@@ -53,11 +53,10 @@ int print_percent(va_list args)
 	_putchar('%');
 	return (1);
 }
-
 /**
- * handle_specifier - checks the format specifier
- * @c: specifier character
- * @args: list of arguments
+ * handle_specifier - checks the format
+ * @c: format character
+ * @args: arguments list
  *
  * Return: number of printed characters
  */
@@ -65,13 +64,14 @@ int handle_specifier(char c, va_list args)
 {
 	if (c == 'c')
 		return (print_char(args));
-	else if (c == 's')
+	if (c == 's')
 		return (print_string(args));
-	else if (c == '%')
+	if (c == '%')
 		return (print_percent(args));
-	else if (c == 'd' || c == 'i')
+	if (c == 'd' || c == 'i')
 		return (print_number(args));
-	else
+	if (c == 'b')
+		return (print_binary(args));
 	{
 		_putchar('%');
 		_putchar(c);

@@ -1,4 +1,3 @@
-
 #ifndef MAIN_H
 #define MAIN_H
 
@@ -13,5 +12,7 @@ int print_percent(va_list args);
 int print_number(va_list args);
 int print_num(int n);
 int handle_specifier(char c, va_list args);
+int print_binary(va_list args);
+int print_binary_helper(unsigned int n);
 
 #endif
