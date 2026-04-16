@@ -4,6 +4,12 @@
 
 This project is a custom `printf` function written in C.
 
+supported conversion specifiers:
+- %c : character
+- %s : string
+- %% : percent sign
+- %d : integer
+- %i : integer
 
 ## Installation
 
@@ -22,6 +28,15 @@ This project is a custom `printf` function written in C.
 - Standard C libraries (stdarg.h, unistd.h)
 - Betty coding style
 
+Allowed Function:
+- write
+- malloc
+- free
+- va_start
+- va_end
+- va_copy
+- va_arg
+
 ## Examples
 _printf("Hello %s\n", "World");
 _printf("Char: %c\n", 'A');
@@ -30,6 +45,7 @@ _printf("Percent: %%\n");
 
 ## Testing
 You can test the function by creating a main.c file and compiling the project using gcc.
+Don not include main.c in repository.
 
 ## Files
 
